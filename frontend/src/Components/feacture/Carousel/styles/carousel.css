@@ -1,0 +1,14 @@
+@import url("./next-prev.css");
+@import url("./caption.css");
+@import url("./dots.css");
+@import url("./effects/fade.css");
+
+/* Slideshow container */
+.slideshowContainer {
+  position: relative;
+  margin: auto;
+}
+
+.active {
+  background-color: #717171;
+}

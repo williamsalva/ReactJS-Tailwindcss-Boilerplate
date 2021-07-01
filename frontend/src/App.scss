@@ -1,0 +1,237 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .Whats{
+   right: 10px;
+   bottom: 10px;
+  }
+  .telenlace{
+   left: 10px;
+   bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Whats{
+    right: 30px;
+    bottom: 40px;
+   }
+   .telenlace{
+      left: 30px;
+      bottom: 40px;
+     }
+}
+
+@media (min-width: 1280px) {
+  .Whats{
+    right: 40px;
+    bottom: 70px;
+   }
+   .telenlace{
+      left: 40px;
+      bottom: 70px;
+     }
+}
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+.b-a {
+   transition: all .25s;
+   content: "";
+   position: absolute;
+   left: 0;
+   height: 6px;
+   width: 30px;
+   border-radius: 15px;
+   background-color: rgba(255, 255, 255, 0.95);
+}
+.menu-collapsed {
+   transition: all .25s;
+   position: fixed;
+   z-index: 1;
+   background-color: #ffc901;
+   border-radius: 100%;
+   color: white;
+  
+   position: absolute;
+   width: 250px;
+   height: 250px;
+   left: -120px;
+   top: -120px;
+   position: fixed;
+   transition: all 0.3s;
+
+   @media (max-width: 640px) {
+    position: absolute;
+   width: 180px;
+    height: 180px;
+    left: -83px;
+    top: -68px;
+   position: fixed;
+   transition: all 0.3s;
+   transition: all .25s;
+   position: fixed;
+   z-index: 1;
+   background-color: #ffc901;
+   border-radius: 100%;
+   color: white;
+   }
+
+
+   cursor: pointer;
+   ul {
+      transition: all 0s;
+      position: fixed;
+      left: -9000px;
+   }
+}
+.bar {
+   @extend .b-a;
+   position: fixed;
+   left: 50px;
+   top: 50px;
+   &:before {
+      @extend .b-a;
+      top: -8px;
+   }
+   &:after {
+      @extend .b-a;
+      top: 8px;
+   }
+
+ @media (max-width: 640px) {
+   position: fixed;
+   left: 26px;
+   top: 50px;
+ }
+
+
+}
+.b-a-expanded {
+   transition: all .25s;
+   top: -0px;
+}
+
+.linehei{
+   line-height: 120px;
+   @media (max-width: 640px) {
+      line-height: 80px;
+   }
+}
+.menu-expanded {
+
+   transition: all .25s;
+   text-align: center;
+   
+   height: 100%;
+   width: 100%;
+   border-radius: 0px;
+   top: 0;
+   left: 0;
+   background-color: #ffc901;
+   ul {
+      transition: all 0s;
+      position: relative;
+      left: 0;
+      top: 50px;
+      z-index: 2;
+      @media (max-width: 640px) {
+         transition: all 0s;
+      position: relative;
+      left: 0;
+      top: 25px;
+      z-index: 2;
+      }
+   }
+
+   a {
+      transition: all .15s;
+      text-decoration: none;
+      
+      left: 0;
+      color: #fff;
+      display:block;
+      transform: scale(1);
+      transition: all 0.3s;
+
+      &:hover,
+      &:focus,
+      &:active {
+          opacity: 1;
+          transform: scale(1.2);
+          transition: all 0.3s;
+      }
+   }
+   .bar {
+      background-color: transparent;
+      transition: all .25s;
+      &:before {
+         @extend .b-a-expanded;
+         transform: rotate(45deg);
+      }
+      &:after {
+         @extend .b-a-expanded;
+         transform: rotate(-45deg);
+      }
+   }
+   nav{
+      padding-right: 50px;
+      @media (max-width: 640px) {
+      padding-right: 26px;
+      }
+   }
+}
+.row {
+   padding-top:150px;
+}
+h1 {
+   font-size: 3em;
+}
+h3 {
+   color:#999;
+}
+p {
+   line-height: 160%;
+   letter-spacing:1px;
+}
